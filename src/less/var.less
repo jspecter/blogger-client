@@ -1,0 +1,23 @@
+@main-color: #409eff;
+
+@font-color: #333;
+
+.borders (@width: 1px, @style: solid, @color: #eee) {
+    border-width: @width;
+    border-style: @style;
+    border-color: @color;
+}
+
+.border1 {
+    .borders();
+}
+
+
+.border2 {
+    .borders();
+}
+
+.clear {
+    overflow: hidden;
+    zoom: 1;
+}

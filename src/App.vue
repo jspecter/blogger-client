@@ -1,28 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <b-header></b-header>
+    <nav-list></nav-list>
+    <div class="main-content">
+      <b-article></b-article>
+      <b-sidebar></b-sidebar>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import bHeader from "./views/header";
+import navList from "./views/navList";
+import bArticle from "./views/article";
+import bSidebar from "./views/sidebar";
 export default {
   name: "app",
-  components: {
-    HelloWorld
-  }
+  components: { bHeader, navList, bArticle, bSidebar }
 };
 </script>
 
-<style>
+<style lang='less' scoped>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 1200px;
+  min-height: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+}
+
+.main-content {
+  .clear();
 }
 </style>
