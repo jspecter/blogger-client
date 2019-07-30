@@ -6,6 +6,9 @@ module.exports = {
     types.forEach(type =>
       addStyleResources(config.module.rule("less").oneOf(type))
     );
+  },
+  devServer: {
+    proxy: "http://localhost:3000"
   }
 };
 

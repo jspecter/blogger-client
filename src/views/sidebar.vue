@@ -3,7 +3,7 @@
     <div class="me">
       <h3>我</h3>
       <p>
-        <a href="javascript:;">Leslie</a>
+        <a href="#">Leslie</a>
       </p>
     </div>
     <div class="archive">

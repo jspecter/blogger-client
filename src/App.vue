@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <b-header></b-header>
+    <editor></editor>
     <nav-list></nav-list>
     <div class="main-content">
       <b-article></b-article>
@@ -14,9 +15,10 @@ import bHeader from "./views/header";
 import navList from "./views/navList";
 import bArticle from "./views/article";
 import bSidebar from "./views/sidebar";
+import editor from "./components/edit";
 export default {
   name: "app",
-  components: { bHeader, navList, bArticle, bSidebar }
+  components: { bHeader, navList, bArticle, bSidebar, editor }
 };
 </script>
 
