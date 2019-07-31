@@ -13,9 +13,6 @@
       <li>
         <a href="#">Spark</a>
       </li>
-      <li class="edit-articles">
-        <el-button type='primary'>写文章</el-button>
-      </li>
     </ul>
 
   </div>
@@ -36,16 +33,13 @@ ul {
     text-align: center;
     color: fade(@main-color, 80%);
     cursor: pointer;
-    &:not(".edit-articles") {
+    &:hover {
       font-size: 16px;
       font-weight: 600;
       transform: scaleX(1.1);
       color: @main-color;
       background: fade(@main-color, 30%);
       transition: 0.3s transform ease-in-out;
-    }
-    &.edit-articles {
-      float: right;
     }
   }
 }

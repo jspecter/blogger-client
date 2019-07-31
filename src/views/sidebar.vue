@@ -24,7 +24,7 @@ export default {};
 <style lang="less" scoped>
 #sidebar {
   float: left;
-  width: calc(~"100% - 760px");
+  width: 30%;
   padding: 20px;
 }
 </style>

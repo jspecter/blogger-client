@@ -1,13 +1,14 @@
-@import "var.less";
-@import "reset.less";
-@import "layout.less";
+@import 'var.less';
+@import 'reset.less';
+@import 'layout.less';
 
 html {
-    background: fade(@main-color, 60%);
+    height: 100%;
+    background: fade(@main-color, 60%) url('../assets/image/bg.jpg') fixed;
 }
 
 body {
-    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    font-family: SimHei, 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: @font-color;

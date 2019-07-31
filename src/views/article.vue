@@ -1,9 +1,14 @@
 <template>
   <div id="articles">
-    <p
-      v-for="item in Articles"
+    <div
+      class="article-item"
+      v-for="(item,index) in Articles"
       :key="item.artId"
-    ><a href="javascript:;">{{item.desc}}</a></p>
+    >
+      <p class="title"><a href="javascript:;">{{item.title}}</a></p>
+      <p class="content">{{item.content}}</p>
+      <p class="profile">{{item.profile}}...</p>
+    </div>
   </div>
 </template>
 
@@ -18,7 +23,7 @@ export default {
   props: {},
   methods: {
     getArticleList() {
-      let url = "/articles";
+      let url = "/articles/getAllArticles";
       this.$http
         .get(url)
         .then(res => {
@@ -39,12 +44,15 @@ export default {
 <style lang="less" scoped>
 #articles {
   float: left;
-  width: 760px;
+  width: 70%;
+  min-width: 600px;
   padding: 20px;
-  background-color: fade(#000, 10%);
   font-size: 15px;
   line-height: 26px;
   letter-spacing: 1px;
+}
+
+.article-item {
 }
 </style>
 
