@@ -2,6 +2,8 @@ import Vue from "vue";
 import App from "./App.vue";
 import axios from "axios";
 import dayjs from "dayjs";
+import "./utils/font_blog";
+import "./utils/filter";
 
 import "!style-loader!css-loader!less-loader!./less/main.less";
 import "element-ui/lib/theme-chalk/index.css";

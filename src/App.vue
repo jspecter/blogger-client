@@ -1,16 +1,14 @@
 <template>
   <div id="app">
-    <b-header></b-header>
-    <div class="middle-box">
+    <header id="main-header">
       <nav-list></nav-list>
-      <div class="edit-articles">
+    </header>
+    <!-- <div class="edit-articles">
         <el-button
           type='primary'
           @click="editArticles"
         >写文章</el-button>
-      </div>
-    </div>
-
+      </div> -->
     <div class="main-content">
       <b-article></b-article>
       <b-sidebar></b-sidebar>
@@ -48,21 +46,12 @@ export default {
   min-width: 900px;
   min-height: 600px;
   margin: 0 auto;
-  padding: 20px;
-  background: #fff;
+  background: #fff url("./assets/image/rect.png") repeat;
   box-shadow: 0 5px 5px fade(#000, 30%);
-}
-
-.middle-box {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  .edit-articles {
-    line-height: 60px;
-  }
 }
 
 .main-content {
   .clear();
+  padding: 0 20px 20px 20px;
 }
 </style>

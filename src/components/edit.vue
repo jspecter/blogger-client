@@ -84,7 +84,8 @@ export default {
       this.editor.create();
     }, 0);
   },
-  destroyed() {
+  beforeDestroy() {
+    console.log(this.timer);
     clearTimeout(this.timer);
   }
 };
