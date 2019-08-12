@@ -3,12 +3,12 @@
     <header id="main-header">
       <nav-list></nav-list>
     </header>
-    <!-- <div class="edit-articles">
-        <el-button
-          type='primary'
-          @click="editArticles"
-        >写文章</el-button>
-      </div> -->
+    <div class="edit-articles">
+      <el-button
+        type='primary'
+        @click="editArticles"
+      >写文章</el-button>
+    </div>
     <div class="main-content">
       <b-article></b-article>
       <b-sidebar></b-sidebar>

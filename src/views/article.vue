@@ -16,7 +16,7 @@
       <div class="article-content">
         <p
           class="content"
-          v-text="item.content"
+          v-html="item.content"
         ></p>
         <p class="pubdate">{{item.autor}} 于 {{item.pubdate | date}}</p>
       </div>
