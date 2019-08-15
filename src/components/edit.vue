@@ -29,7 +29,7 @@ export default {
   name: "editor",
   data() {
     return {
-      isVisible: true,
+      isVisible: false,
       editor: null,
       article: {
         autor: "LeslieZhu",

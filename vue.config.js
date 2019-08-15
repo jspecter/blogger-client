@@ -1,7 +1,7 @@
 const path = require("path");
+const mode = process.env.NODE_ENV;
 
 module.exports = {
-  outputDir: path.resolve(__dirname, ".."),
   chainWebpack: config => {
     const types = ["vue", "normal"];
     types.forEach(type =>
@@ -9,7 +9,8 @@ module.exports = {
     );
   },
   devServer: {
-    proxy: "http://yunbao.one"
+    proxy:
+      mode === "production" ? "http://yunbao.one" : "http://localhost:50080"
   }
 };
 

@@ -1,25 +1,44 @@
 <template>
   <div id="navList">
     <ul>
-      <li>
-        <a href="#">Tech</a>
-      </li>
-      <li>
-        <a href="#">Music</a>
-      </li>
-      <li>
-        <a href="#">Novel</a>
-      </li>
-      <li>
-        <a href="#">Spark</a>
-      </li>
+      <router-link
+        to="/tech"
+        tag="li"
+        replace
+      >
+        Tech
+      </router-link>
+      <router-link
+        to="/music"
+        tag="li"
+        replace
+      >
+        Music
+      </router-link>
+      <router-link
+        to="/novel"
+        tag="li"
+        replace
+      >
+        Novel
+      </router-link>
+      <router-link
+        to="/spark"
+        tag="li"
+        replace
+      >
+        Spark
+      </router-link>
     </ul>
 
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "NavList",
+  methods: {}
+};
 </script> 
 <style lang="less" scope="scoped">
 #navList {
@@ -50,9 +69,7 @@ ul {
     line-height: 60px;
     font-size: 20px;
     font-weight: 600;
-    a {
-      color: #fff;
-    }
+    color: #fff;
     cursor: pointer;
     &:hover {
       transform: translate(1px, 1px);

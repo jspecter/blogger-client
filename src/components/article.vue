@@ -33,12 +33,18 @@ export default {
       Articles: []
     };
   },
-  props: {},
+  props: {
+    type: {
+      type: String,
+      required: true,
+      default: "tech"
+    }
+  },
   methods: {
     getArticleList() {
       let url = "/articles/getAllArticles";
       this.$http
-        .get(url)
+        .get(url, { type: this.type })
         .then(res => {
           const { data } = res;
           this.Articles = data;
@@ -59,7 +65,9 @@ export default {
   float: left;
   width: 70%;
   min-width: 600px;
+  max-width: 900px;
   padding: 20px;
+  border-right: 1px solid #eee;
   line-height: 26px;
   letter-spacing: 1px;
 }
@@ -69,8 +77,7 @@ export default {
     border-bottom: 1px dashed #999;
   }
   .title {
-    height: 60px;
-    padding-top: 30px;
+    height: 30px;
     font-size: 15px;
     font-weight: bold;
     &:hover {
@@ -83,6 +90,8 @@ export default {
       text-indent: 24px;
     }
     .pubdate {
+      height: 30px;
+      padding-top: 10px;
       text-align: right;
       color: #999;
     }
