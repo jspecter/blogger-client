@@ -22,6 +22,12 @@
       </div>
 
     </div>
+    <div
+      class="placeholder"
+      v-if="Articles.length < 1"
+    >
+      <b>还没有文章发布哦！</b>
+    </div>
   </div>
 </template>
 
@@ -37,14 +43,18 @@ export default {
     type: {
       type: String,
       required: true,
-      default: "tech"
+      default: ""
     }
   },
   methods: {
     getArticleList() {
-      let url = "/articles/getAllArticles";
+      let url = "/articles/getAllArticles",
+        params = {
+          type: this.type
+        };
+      console.log(this.type);
       this.$http
-        .get(url, { type: this.type })
+        .get(url, { params })
         .then(res => {
           const { data } = res;
           this.Articles = data;

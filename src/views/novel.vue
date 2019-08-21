@@ -1,6 +1,6 @@
 <template>
   <div id="novel">
-    <b-article></b-article>
+    <b-article type="novel"></b-article>
     <b-sidebar></b-sidebar>
   </div>
 </template>

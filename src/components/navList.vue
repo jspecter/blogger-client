@@ -29,6 +29,14 @@
       >
         Spark
       </router-link>
+      <li class="writing-box">
+        <svg
+          class="btn-writing"
+          aria-hidden="true"
+        >
+          <use xlink:href="#icon-write-shenghuohao"></use>
+        </svg>
+      </li>
     </ul>
 
   </div>
@@ -71,10 +79,26 @@ ul {
     font-weight: 600;
     color: #fff;
     cursor: pointer;
-    &:hover {
+    &:not(:last-child):hover {
       transform: translate(1px, 1px);
       background: fade(#000, 30%);
       transition: 0.1s transform ease-in-out;
+    }
+    &.writing-box {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      float: right;
+      cursor: default;
+      .btn-writing {
+        width: 60%;
+        height: 60%;
+        cursor: pointer;
+        &:active {
+          transform: translate(1px, 1px);
+        }
+      }
     }
   }
 }

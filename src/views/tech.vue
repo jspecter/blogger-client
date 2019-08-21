@@ -1,6 +1,6 @@
 <template>
   <div id="tech">
-    <b-article></b-article>
+    <b-article type="tech"></b-article>
     <b-sidebar></b-sidebar>
   </div>
 </template>
@@ -13,6 +13,9 @@ export default {
   components: {
     bArticle,
     bSidebar
+  },
+  data() {
+    return {};
   }
 };
 </script> 

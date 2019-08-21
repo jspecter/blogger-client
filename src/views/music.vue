@@ -1,6 +1,6 @@
 <template>
   <div id="music">
-    <b-article></b-article>
+    <b-article type="music"></b-article>
     <b-sidebar></b-sidebar>
   </div>
 </template>

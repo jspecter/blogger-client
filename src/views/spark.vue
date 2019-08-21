@@ -1,6 +1,6 @@
 <template>
   <div id="spark">
-    <b-article></b-article>
+    <b-article type='spark'></b-article>
     <b-sidebar></b-sidebar>
   </div>
 </template>
