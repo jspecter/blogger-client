@@ -71,7 +71,8 @@ ul {
   .clear();
   li {
     float: left;
-    width: 120px;
+    width: 25%;
+    max-width: 120px;
     height: 60px;
     padding-left: 20px;
     line-height: 60px;
@@ -84,6 +85,7 @@ ul {
       background: fade(#000, 30%);
       transition: 0.1s transform ease-in-out;
     }
+
     &.writing-box {
       display: flex;
       flex-flow: row nowrap;
@@ -98,6 +100,11 @@ ul {
         &:active {
           transform: translate(1px, 1px);
         }
+      }
+    }
+    @media screen and (max-width: 600px) {
+      &.writing-box {
+        display: none;
       }
     }
   }

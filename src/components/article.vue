@@ -74,7 +74,6 @@ export default {
 #articles {
   float: left;
   width: 70%;
-  min-width: 600px;
   max-width: 900px;
   padding: 20px;
   border-right: 1px solid #eee;
@@ -104,6 +103,17 @@ export default {
       padding-top: 10px;
       text-align: right;
       color: #999;
+    }
+  }
+}
+
+@media screen and(max-width:600px) {
+  #articles {
+    width: 100%;
+    padding: 0;
+    border: none;
+    .article-content {
+      padding: 0;
     }
   }
 }

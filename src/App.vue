@@ -23,11 +23,10 @@ export default {
 
 <style lang="less" scoped>
 #app {
-  width: 70%;
+  width: 100%;
   max-width: 1200px;
-  min-width: 900px;
   margin: 0 auto;
-  background: #fff url("./assets/image/rect.png") repeat;
+  // background: #fff url("./assets/image/rect.png") repeat;
   box-shadow: 0 5px 5px fade(#000, 30%);
 }
 
