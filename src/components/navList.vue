@@ -5,6 +5,7 @@
         to="/tech"
         tag="li"
         replace
+        active-class="active"
       >
         Tech
       </router-link>
@@ -12,6 +13,7 @@
         to="/music"
         tag="li"
         replace
+        active-class="active"
       >
         Music
       </router-link>
@@ -19,6 +21,7 @@
         to="/novel"
         tag="li"
         replace
+        active-class="active"
       >
         Novel
       </router-link>
@@ -26,6 +29,7 @@
         to="/spark"
         tag="li"
         replace
+        active-class="active"
       >
         Spark
       </router-link>
@@ -81,6 +85,12 @@ ul {
     color: #fff;
     cursor: pointer;
     &:not(:last-child):hover {
+      transform: translate(1px, 1px);
+      background: fade(#000, 30%);
+      transition: 0.1s transform ease-in-out;
+    }
+
+    &.active {
       transform: translate(1px, 1px);
       background: fade(#000, 30%);
       transition: 0.1s transform ease-in-out;
